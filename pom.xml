@@ -76,7 +76,7 @@
     <repository>
         <id>central</id>
         <name>localhost-releases</name>
-        <url>http://127.0.0.1:8081/artifactory/libs-release-local</url>
+        <url>http://10.83.28.4:8881/artifactory/libs-release-local</url>
     </repository>
 </distributionManagement>
 </project>
