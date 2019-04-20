@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Publish') { 
             steps {
-                 sh "mvn package" 
+                 sh "mvn publish" 
             }
         }
     }
