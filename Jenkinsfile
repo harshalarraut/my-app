@@ -1,19 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('---clean---') { 
+        stage('Clone Repo and Clean') { 
             steps {
-                sh "mvn clean" 
+                 sh "mvn clean"
             }
         }
-        stage('---test---') { 
+        stage('Test') { 
             steps {
-                sh "mvn test" 
+                 sh "mvn test -f my-app" 
             }
         }
-        stage('---package---') { 
+        stage('Deploy') { 
             steps {
-                sh "mvn package" 
+                 sh "mvn package -f my-app" 
             }
         }
     }
