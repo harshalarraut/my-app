@@ -11,12 +11,17 @@ pipeline {
                  sh "mvn clean"
             }
         }
-        stage('Test') { 
+        stage('Unit Test') { 
             steps {
                  sh "mvn test" 
             }
         }
-        stage('Deploy') { 
+        stage('Packaging') { 
+            steps {
+                 sh "mvn package" 
+            }
+        }
+        stage('Publish') { 
             steps {
                  sh "mvn package" 
             }
